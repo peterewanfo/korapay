@@ -192,13 +192,11 @@ class _KoraPayState extends State<KoraPay> {
                 leading: IconButton(
                   icon: const Icon(Icons.close),
                   onPressed: () {
-                    displayLoader();
 
                     ///check transaction status before closing the view back to the previous screen
                     checkTransactionStatus(
                         snapshot.data!.data!.reference.toString())
                         .then((value) {
-                      Navigator.of(context).pop();
                       Navigator.of(context).pop();
                     });
                   },
