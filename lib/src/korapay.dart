@@ -67,7 +67,7 @@ class _KoraPayState extends State<KoraPay> {
           "reference": widget.reference,
           "currency": widget.currency,
           "merchant_bears_cost": widget.merchantBearsCost,
-          "notification_url": notificationUrl,
+          "notification_url": widget.notificationUrl,
           "redirect_url": widget.callbackUrl,
           "channels": widget.paymentChannel
         }),
