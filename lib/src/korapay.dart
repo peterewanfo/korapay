@@ -26,7 +26,7 @@ class KoraPay extends StatefulWidget {
     required this.email,
     required this.reference,
     required this.notificationUrl,
-    required this.merchantBearsCost
+    required this.merchantBearsCost,
     required this.currency,
     required this.amount,
     required this.callbackUrl,
