@@ -38,10 +38,10 @@ class PayWithKora {
     required double amount,
 
     /// Notification callback URL
-    required double notificationUrl,
+    required String notificationUrl,
 
     /// Should merchant bear cost
-    required double merchantBearsCost,
+    required bool merchantBearsCost,
 
     /// What happens next after transaction is completed
     required Function() transactionCompleted,
