@@ -37,6 +37,12 @@ class PayWithKora {
     /// Amount you want to charge the user
     required double amount,
 
+    /// Notification callback URL
+    required double notificationUrl,
+
+    /// Should merchant bear cost
+    required double merchantBearsCost,
+
     /// What happens next after transaction is completed
     required Function() transactionCompleted,
 
@@ -60,6 +66,8 @@ class PayWithKora {
           transactionNotCompleted: transactionNotCompleted,
           callbackUrl: callbackUrl,
           name: customerName,
+          notificationUrl: notificationUrl,
+          merchantBearsCost: merchantBearsCost,
         ),
       ),
     );

@@ -9,6 +9,8 @@ import 'package:webview_flutter/webview_flutter.dart';
 class KoraPay extends StatefulWidget {
   final String secretKey;
   final String reference;
+  final String notificationUrl;
+  final bool merchantBearsCost;
   final String callbackUrl;
   final String currency;
   final String email;
@@ -23,6 +25,8 @@ class KoraPay extends StatefulWidget {
     required this.secretKey,
     required this.email,
     required this.reference,
+    required this.notificationUrl,
+    required this.merchantBearsCost
     required this.currency,
     required this.amount,
     required this.callbackUrl,
@@ -62,6 +66,8 @@ class _KoraPayState extends State<KoraPay> {
           "amount": amount.toString(),
           "reference": widget.reference,
           "currency": widget.currency,
+          "merchant_bears_cost": widget.merchantBearsCost,
+          "notification_url": notificationUrl,
           "redirect_url": widget.callbackUrl,
           "channels": widget.paymentChannel
         }),
